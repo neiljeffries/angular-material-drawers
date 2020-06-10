@@ -1,29 +1,22 @@
-import { Component, OnInit, ViewChild, Output, EventEmitter } from '@angular/core';
-import { SideAlertDrawerService } from 'src/app/services/side-alert-drawer.service';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-nav-bar',
   templateUrl: './nav-bar.component.html',
   styleUrls: ['./nav-bar.component.css']
 })
-export class NavBarComponent implements OnInit {
-  navPosition = 'start';
-  constructor() {
+export class NavBarComponent {
+  position = 'start';
+  @Output() toggleOpenCloseEmit: EventEmitter<any> = new EventEmitter();
+  @Output() togglePositionEmit: EventEmitter<any> = new EventEmitter();
 
-   }
-   @Output() toggle: EventEmitter<any> = new EventEmitter();
-   @Output() positionToggled: EventEmitter<any> = new EventEmitter();
-
-  ngOnInit() {
-  }
-
-  toggleSlide() {
-    this.toggle.emit(null);
+  onToggleOpenClose() {
+    this.toggleOpenCloseEmit.emit(null);
   }
 
   onTogglePosition(position: string) {
-  this.navPosition = position === 'start' ? 'end' : 'start';
-  this.positionToggled.emit(position);
+    this.position = position === 'start' ? 'end' : 'start';
+    this.togglePositionEmit.emit(position);
   }
 
 }

@@ -1,4 +1,4 @@
 <mat-toolbar>
-	<button (click)="toggleSlide()" mat-button>Toggle SideNav</button>
-	<button mat-button color="primary" (click)="onTogglePosition(navPosition)" mat-button>Alerts Position: {{ navPosition === 'start' ? 'LEFT' : 'RIGHT' }}</button>
+	<button (click)="onToggleOpenClose()" mat-button>Toggle SideNav</button>
+	<button mat-button color="primary" (click)="onTogglePosition(position)" mat-button>Alerts Position: {{ position === 'start' ? 'LEFT' : 'RIGHT' }}</button>
 </mat-toolbar>

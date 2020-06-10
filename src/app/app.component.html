@@ -1,13 +1,21 @@
-<app-nav-bar (toggle)="isToggled($event)" (positionToggled)="positionToggled($event)"></app-nav-bar>
+<app-nav-bar (toggleOpenCloseEmit)="toggleOpenClose($event)" (togglePositionEmit)="togglePosition($event)"></app-nav-bar>
 
 <mat-drawer-container class="example-container">
 
-  <mat-drawer #sideNav mode="side" opened="false" [position]="navPosition" style="overflow: hidden; border: 1px solid silver;" >
-      <app-side-alert-drawer></app-side-alert-drawer>
+  <mat-drawer #sideDrawer mode="side" opened="false" [position]="position" class="sideDrawer">
+    <app-side-alert-drawer></app-side-alert-drawer>
   </mat-drawer>
 
   <mat-drawer-content>
-    <div style="width: 100%; min-height: 90vh;">MAIN CONTENT</div>
+    <div style="width: 100%; min-height: 90vh;">
+      <p>MAIN CONTENT</p>
+      <table border="1" style="width: 100%;">
+        <tr> <td>row1</td> </tr>
+        <tr> <td>row2</td> </tr>
+        <tr> <td>row3</td> </tr>
+        <tr> <td>row4</td> </tr>
+      </table>
+    </div>
     <router-outlet></router-outlet>
   </mat-drawer-content>
 
