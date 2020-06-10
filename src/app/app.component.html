@@ -1,26 +1,21 @@
-<mat-toolbar>
-	<button (click)="sideNav.toggle()" mat-button>Toggle SideNav</button>
-	<button mat-button color="primary" (click)="onTogglePosition(navPosition)" mat-button>Alerts Position: {{ navPosition === 'start' ? 'LEFT' : 'RIGHT' }}</button>
-</mat-toolbar>
+<app-nav-bar></app-nav-bar>
 
 <mat-drawer-container class="example-container">
 
-	<mat-drawer #sideNav mode="side" opened="true" [position]="navPosition">
-    <div style="width: 400px; height: 100%;">
-    <p> Drawer content </p>
-    <ul>
-      <li *ngFor="let item of items; let i = index" [attr.data-index]="i">
-        Id: {{item.id}} Name: {{item.name}}
-      </li>
-    </ul>
-  </div>
+  <mat-drawer #sideNav mode="side" opened="true" [position]="navPosition" style="overflow: hidden; border: 1px solid silver;" >
+    
+    <div style="width: 400px; height: 90vh;">
+      <app-side-alert-drawer></app-side-alert-drawer>
+    </div>
+
   </mat-drawer>
 
-	<mat-drawer-content>
-    <div style="width:100%; min-height: 500px;">MAIN CONTENT</div>
+  <mat-drawer-content>
+
+    <div style="width: 100%; min-height: 90vh;">MAIN CONTENT</div>
+
     <router-outlet></router-outlet>
+
   </mat-drawer-content>
 
 </mat-drawer-container>
-
-

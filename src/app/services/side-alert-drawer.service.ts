@@ -6,14 +6,6 @@ import { SideAlertDrawer } from '../classes/side-alert-drawer';
   providedIn: 'root'
 })
 
-// const defaults: SideAlertDrawer = {
-//   a: false,
-//   b: 150,
-//   c: 96,
-//   d: 0,
-//   e: 0,
-//   position: 'start'
-// };
 
 export class SideAlertDrawerService {
 
@@ -22,8 +14,15 @@ export class SideAlertDrawerService {
   private navPositionSubject = new BehaviorSubject<string>('start');
   navPosition = this.navPositionSubject.asObservable();
 
+  private sideToggleSubject = new BehaviorSubject<number>(1);
+  sideToggle = this.sideToggleSubject.asObservable();
+
   onTogglePosition(position: string) {
     this.navPositionSubject.next(position === 'start' ? 'end' : 'start');
+  }
+
+  sideToggled(x) {
+    this.sideToggleSubject.next(x === 1 ? 0 : 1);
   }
 
 

@@ -5,6 +5,7 @@ import { AppMaterialModule } from './material/app-material.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SideAlertDrawerComponent } from './components/side-alert-drawer/side-alert-drawer.component';
+import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 
 
 
@@ -13,7 +14,8 @@ import { SideAlertDrawerComponent } from './components/side-alert-drawer/side-al
 @NgModule({
   declarations: [
     AppComponent,
-    SideAlertDrawerComponent
+    SideAlertDrawerComponent,
+    NavBarComponent
   ],
   imports: [
     BrowserModule,
