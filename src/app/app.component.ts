@@ -1,6 +1,6 @@
-import { Component, ViewChild, AfterViewInit } from '@angular/core';
-import { SideAlertDrawerService } from './services/side-alert-drawer.service';
+import { AfterViewInit, Component, ViewChild } from '@angular/core';
 import { MatSidenav } from '@angular/material';
+import { SideAlertDrawerService } from './services/side-alert-drawer.service';
 
 @Component({
   selector: 'app-root',

@@ -9,12 +9,13 @@ import { SideAlertDrawerService } from 'src/app/services/side-alert-drawer.servi
 export class NavBarComponent implements OnInit {
   navPosition = 'start';
   constructor(private sideAlertDrawerService: SideAlertDrawerService) {
-    this.sideAlertDrawerService.navPosition.subscribe((position: string) => {
-      this.navPosition = position;
-    });
+
    }
 
   ngOnInit() {
+    this.sideAlertDrawerService.navPosition.subscribe((position: string) => {
+      this.navPosition = position;
+    });
   }
 
   toggleSlide() {
