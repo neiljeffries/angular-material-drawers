@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild, Output, EventEmitter } from '@angular/core';
 import { SideAlertDrawerService } from 'src/app/services/side-alert-drawer.service';
 
 @Component({
@@ -8,22 +8,22 @@ import { SideAlertDrawerService } from 'src/app/services/side-alert-drawer.servi
 })
 export class NavBarComponent implements OnInit {
   navPosition = 'start';
-  constructor(private sideAlertDrawerService: SideAlertDrawerService) {
+  constructor() {
 
    }
+   @Output() toggle: EventEmitter<any> = new EventEmitter();
+   @Output() positionToggled: EventEmitter<any> = new EventEmitter();
 
   ngOnInit() {
-    this.sideAlertDrawerService.navPosition.subscribe((position: string) => {
-      this.navPosition = position;
-    });
   }
 
   toggleSlide() {
-    this.sideAlertDrawerService.sideToggled(1);
+    this.toggle.emit(null);
   }
 
   onTogglePosition(position: string) {
-    this.sideAlertDrawerService.onTogglePosition(position);
+  this.navPosition = position === 'start' ? 'end' : 'start';
+  this.positionToggled.emit(position);
   }
 
 }
