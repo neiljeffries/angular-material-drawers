@@ -1,4 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+/* @import '~@angular/material/prebuilt-themes/deeppurple-amber.css'; */
+/* @import '~@angular/material/prebuilt-themes/pink-bluegrey.css'; */
+/* @import '~@angular/material/prebuilt-themes/purple-green.css'; */
+
+body{
+    margin:0;
+    padding:0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 .mat-drawer-inner-container {
   overflow: hidden !important;
 }
@@ -6,4 +18,33 @@
 .sideDrawer {
   overflow: hidden;
   border: 1px solid silver;
+
+}
+
+.alertDiv {
+    width: 253px;
+    padding: 4px;
+    border: solid 1px silver;
+    margin: 1px 3px 1px 3px;
+    float: left;
+    clear: both;
+    height: 40px;
+    font-size: 12px;
+    background-color: #EEE;
+}
+
+.alertDiv:first-child {
+    height: 24px;
+    border: 0;
+    line-height: 20px;
+    font-weight: bold;
+    background-color: #DDD;
+    text-align: center;
+}
+
+.alertDivWrap {
+  width: 270px;
+  height: 90vh;
+  padding: 2px 0 0 0;
+  background-color: #DDD;
 }

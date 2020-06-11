@@ -1,6 +1,6 @@
 <app-nav-bar (toggleOpenCloseEmit)="toggleOpenClose($event)" (togglePositionEmit)="togglePosition($event)"></app-nav-bar>
 
-<mat-drawer-container class="example-container">
+<mat-drawer-container>
 
   <mat-drawer #sideDrawer mode="side" opened="false" [position]="position" class="sideDrawer">
     <app-side-alert-drawer></app-side-alert-drawer>
