@@ -1,15 +1,15 @@
 <div class="alertDivWrap">
   <div class="alertDiv">Alerts</div>
 
-  <div class="alertDiv" *ngFor="let item of items; let i = index">
+  <div class="alertDiv" *ngFor="let item of items; let i = index" [style.backgroundColor] = "item.id % 2 == 0 ? '#ff0000a8' : '#1e90ff96'" >
     <div class="type-div">
       {{ item.type }}
     </div>
     <div class="dot-div">
-      <span class="red-dot"></span>
+      <span class="purple-dot"></span>
     </div>
     <div class="id-div">
-      <div class="numberCircle">{{ item.id }}</div>
+      <div class="numberCircle" >{{ item.id }}</div>
     </div>
     <div class="detail-div">
       {{ item.detail }}
