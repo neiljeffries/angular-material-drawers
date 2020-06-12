@@ -12,39 +12,82 @@ body{
 }
 
 .mat-drawer-inner-container {
-  overflow: hidden !important;
+  /* overflow: hidden !important; */
 }
 
 .sideDrawer {
-  overflow: hidden;
-  border: 1px solid silver;
+  /* overflow: hidden; */
+  border-bottom: 1px solid silver;
 
 }
 
 .alertDiv {
-    width: 253px;
-    padding: 4px;
-    border: solid 1px silver;
-    margin: 1px 3px 1px 3px;
-    float: left;
-    clear: both;
-    height: 40px;
-    font-size: 12px;
-    background-color: #EEE;
+  width: 258px;
+  padding: 3px;
+  border: solid 1px#c0c0c08c;
+  margin: 0px 0px 2px 2px;
+  float: left;
+  clear: both;
+  height: 48px;
+  font-size: 11px;
+  background-color: #f3f3f3;
+  border-radius: 4px;
 }
-
 .alertDiv:first-child {
-    height: 24px;
-    border: 0;
-    line-height: 20px;
-    font-weight: bold;
-    background-color: #DDD;
-    text-align: center;
+  height: 24px;
+  border: solid 1px #ddd;
+  line-height: 22px;
+  font-weight: bold;
+  background-color: #ddd;
+  text-align: center;
+  margin-bottom: 2px;
+  font-size: 12px;
+  text-transform: uppercase;
+  border-radius: 2px;
 }
-
 .alertDivWrap {
   width: 270px;
   height: 90vh;
   padding: 2px 0 0 0;
-  background-color: #DDD;
+  /* background-color: rgba(0, 0, 0, 0.46); */
 }
+
+
+.clean-table {
+  border: solid 1px #DDEEEE;
+  border-collapse: collapse;
+  border-spacing: 0;
+  font: normal 13px Arial, sans-serif;
+  width: 99%;
+}
+.clean-table thead th {
+  background-color: #DDEFEF;
+  border: solid 1px #DDEEEE;
+  color: #336B6B;
+  padding: 10px;
+  text-align: left;
+  text-shadow: 1px 1px 1px #fff;
+}
+.clean-table tbody td {
+  border: solid 1px #DDEEEE;
+  color: #333;
+  padding: 10px;
+  text-shadow: 1px 1px 1px #fff;
+}
+
+
+.red-dot{
+  height: 10px;
+  width: 10px;
+  background-color: red;
+  border-radius: 50%;
+  float: right;
+  }
+
+.green-dot{
+  height: 10px;
+  width: 10px;
+  background-color: #2cb927;
+  border-radius: 50%;
+  float: right;
+  }

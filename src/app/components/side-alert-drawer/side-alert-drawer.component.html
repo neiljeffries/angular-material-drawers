@@ -1,23 +1,12 @@
 <div class="alertDivWrap">
-<div class="alertDiv"><div>Alerts</div></div>
-  <!-- <ul>
-    <li *ngFor="let item of items; let i = index" [attr.data-index]="i">
-      Id: {{item.id}} Name: {{item.name}}
-    </li>
-  </ul> -->
-  <div class="alertDiv">
+  <div class="alertDiv">Alerts</div>
 
-      <div style="font-weight: bold;">Alert Type</div>
-      <div style="color:red">Text <span style="color:#888">Some more details about it</span></div>
+  <div class="alertDiv" *ngFor="let item of items; let i = index">
+    <div class="type-div" style="font-weight: bold; float:left; margin: 1px 0 5px 0;">{{ item.type }}</div>
+    <div class="dot-div" style="float:right"><span class="red-dot"></span></div>
+    <div class="id-div" style="color: red; float:left; clear: left; width: 30px;">{{ item.id }}</div>
+    <div class="detail-div" style="color: #888; float:left">{{ item.detail }}</div>
+  </div>
 
-  </div>
-  <div class="alertDiv">
-    <div style="font-weight: bold;">Alert Type</div>
-    <div style="color:green">Bob <span style="color:#888">Some more details about it</span></div>
-  </div>
-  <div class="alertDiv">
-    <div style="font-weight: bold;">Alert Type</div>
-    <div style="color:blue">Tom <span style="color:#888">Some more details about it</span></div>
-  </div>
+
 </div>
-
