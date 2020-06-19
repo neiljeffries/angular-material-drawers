@@ -1,12 +1,12 @@
 <div class="alertDivWrap">
-  <div class="alertDiv">Alerts</div>
+  <div class="alertDiv">Alerts <button mat-button class="smallRoundButton" (click)="onClose($event)">&#10006;</button></div>
 
-  <div class="alertDiv" *ngFor="let item of items; let i = index" [style.backgroundColor] = "item.id % 2 == 0 ? '#ff0000a8' : '#1e90ff96'" >
+  <div class="alertDiv" *ngFor="let item of items; let i = index" [ngClass]="item.id %2 == 0 ? 'class1' : 'class2'" >
     <div class="type-div">
-      {{ item.type }}
+      {{ item.type }} &#9403; &#9406; &#9401; &#9416;  //FIDS 
     </div>
     <div class="dot-div">
-      <span class="purple-dot"></span>
+       <span class="purple-dot" [ngClass]="{'class1': item.id == 2 }"></span>
     </div>
     <div class="id-div">
       <div class="numberCircle" >{{ item.id }}</div>

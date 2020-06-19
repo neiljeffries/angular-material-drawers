@@ -8,7 +8,7 @@ import { MatSidenav } from '@angular/material';
 })
 export class AppComponent {
 
-  title = 'angular-material-drawers';
+  title = '🄵 🄸 🄳 🅂';
   position = 'start';
   @ViewChild('sideDrawer') public sideDrawer: MatSidenav;
 
@@ -18,6 +18,10 @@ export class AppComponent {
 
   togglePosition(position) {
     this.position = position === 'start' ? 'end' : 'start';
+  }
+
+  close() {
+    this.sideDrawer.close();
   }
 
 }

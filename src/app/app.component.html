@@ -3,13 +3,13 @@
 <mat-drawer-container>
 
   <mat-drawer #sideDrawer mode="side" opened="false" [position]="position" class="sideDrawer">
-    <app-side-alert-drawer></app-side-alert-drawer>
+    <app-side-alert-drawer (closeEmit)="sideDrawer.close()"></app-side-alert-drawer>
   </mat-drawer>
 
   <mat-drawer-content>
-    <div style="width: 100%; min-height: 90vh;">
+    <div style="min-height: 90vh; padding-left:10px">
       <p>MAIN CONTENT</p>
-      <table border="1" class="clean-table">
+      <table class="clean-table">
         <tr> <td>row1</td> </tr>
         <tr> <td>row2</td> </tr>
         <tr> <td>row3</td> </tr>
@@ -20,3 +20,62 @@
   </mat-drawer-content>
 
 </mat-drawer-container>
+
+
+
+
+<!--
+<div>
+	<mat-sidenav-container class="sidenav-full">
+		<mat-sidenav #sidenav1 mode="side" position="start" role="navigation" class="sidenav-wv">
+      this is parent menu
+		</mat-sidenav>
+		<mat-sidenav-content>
+			<mat-sidenav-container class="sidenav-full">
+				<mat-sidenav #sidenav2 opened mode="side" position="start" role="navigation" class="sidenav-wv">
+
+					<div fxLayout="column" class="sidenav-normal">
+						<button (click)="sidenav2.toggle()" mat-button class="align-center color-white">
+          <i class="material-icons">reorder</i>
+        </button>
+        <button mat-button class="rec-menu mt-30" (click)="sidenav1.toggle()">
+          <span class="color-white">menu 1</span>
+        </button>
+        <button mat-button class="rec-menu mt-30" (click)="sidenav1.toggle()">
+          <span class="color-white">menu 2</span>
+        </button>
+      </div>
+
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <mat-toolbar role="toolbar" class="main-header mat-elevation-z1 sticky-header">
+        <mat-toolbar-row>
+          <button mat-button (click)="sidenav2.toggle()" class="toggle-Mbtn new--item">
+            <i class="material-icons color-white">menu</i>
+          </button>
+          <h2 class="header-text header-block">This is Dashboard</h2>
+          <span class="flex-spacer"></span>
+          <button mat-icon-button>
+            <mat-icon class="color-white">search</mat-icon>
+          </button>
+          <button mat-icon-button [matMenuTriggerFor]="menu">
+            <mat-icon class="color-white">more_vert</mat-icon>
+          </button>
+          <mat-menu #menu="matMenu" [overlapTrigger]="false">
+            <button mat-menu-item>
+              <mat-icon>power_settings_new</mat-icon>
+              <span>Logout</span>
+            </button>
+          </mat-menu>
+        </mat-toolbar-row>
+      </mat-toolbar>
+
+      <div>
+        main board
+      </div>
+
+     </mat-sidenav-content>
+    </mat-sidenav-container>
+   </mat-sidenav-content>
+  </mat-sidenav-container>
+</div> -->

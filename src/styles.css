@@ -5,20 +5,16 @@
 /* @import '~@angular/material/prebuilt-themes/pink-bluegrey.css'; */
 /* @import '~@angular/material/prebuilt-themes/purple-green.css'; */
 
-body{
-    margin:0;
-    padding:0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.mat-drawer-inner-container {
-  /* overflow: hidden !important; */
-}
+
 
 .sideDrawer {
-  /* overflow: hidden; */
   border-bottom: 1px solid silver;
-
 }
 
 .alertDiv {
@@ -50,70 +46,66 @@ body{
   width: 270px;
   height: 90vh;
   padding: 2px 0 0 0;
-  /* background-color: rgba(0, 0, 0, 0.46); */
 }
-
 
 .clean-table {
-  border: solid 1px #DDEEEE;
+  border: solid 1px #ddeeee;
   border-collapse: collapse;
   border-spacing: 0;
-  font: normal 13px Arial, sans-serif;
-  width: 99%;
+  font-weight: normal;
+  font-size: 13px;
+  width: 99.5%;
 }
 .clean-table thead th {
-  background-color: #DDEFEF;
-  border: solid 1px #DDEEEE;
-  color: #336B6B;
+  background-color: #ddefef;
+  border: solid 1px #ddeeee;
+  color: #336b6b;
   padding: 10px;
   text-align: left;
-  text-shadow: 1px 1px 1px #fff;
 }
 .clean-table tbody td {
-  border: solid 1px #DDEEEE;
+  border: solid 1px #ddeeee;
   color: #333;
   padding: 10px;
-  text-shadow: 1px 1px 1px #fff;
 }
 
-
-.red-dot{
+.red-dot {
   height: 10px;
   width: 10px;
   background-color: red;
   border-radius: 50%;
   float: right;
-  }
+}
 
-.green-dot{
+.green-dot {
   height: 10px;
   width: 10px;
   background-color: #2cb927;
   border-radius: 50%;
   float: right;
-  }
-.purple-dot{
+}
+.purple-dot {
   height: 10px;
   width: 10px;
   background-color: #a027b966;
   border-radius: 50%;
   float: right;
   border: 1px solid #a027b996;
-  }
-
-  .numberCircle {
-    width: 20px;
-    height: 20px;
-    line-height: 20px;
-    border-radius: 50%;
-    text-align: center;
-    font-size: 14px;
-    border: 2px solid #fff;
-    color: white;
-    background-color: steelblue;
 }
 
-.id-div{
+.numberCircle {
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 14px;
+  border: 2px solid #fff;
+  color: white;
+  background-color: steelblue;
+}
+
+.id-div {
   float: left;
   clear: left;
   width: 24px;
@@ -124,18 +116,58 @@ body{
   color: white;
 }
 
-.detail-div{
-  color: #fff; float: left; width: 228px; height: 32px; line-height: 13px;
+.detail-div {
+  color: #fff;
+  float: left;
+  width: 228px;
+  height: 32px;
+  line-height: 13px;
 }
 
-.dot-div{
+.dot-div {
   float: right;
   margin-top: 3px;
 }
 
-.type-div{
+.type-div {
   font-weight: bold;
   float: left;
   margin: 1px 0 3px 0;
   color: white;
+}
+
+.class1 {
+  background-color: #ff0000a8;
+}
+
+.class2 {
+  background-color: #1e90ff96;
+}
+
+.smallRoundButton{
+  float: right !important;
+    line-height: 18px !important;
+    min-width: 22px !important;
+    padding: 0 !important;
+    width: 22px !important;
+    height: 22px !important;
+    border-radius: 50% !important;
+    margin-top: 3px !important;
+    border: solid 1px #ccc !important;
+    color: #888 !important;
+    background-color: #eee;
+}
+
+
+.sidenav-full{
+  height: 100vh;
+}
+.sidenav-wv{
+ width:  100px;
+}
+.flex-spacer {
+    flex: 1 1 auto;
+}
+.mt-30{
+  margin-top: 30px;
 }
